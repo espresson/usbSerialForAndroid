@@ -1,0 +1,31 @@
+apply plugin: 'com.android.library'
+
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion  '30.0.0'
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+        consumerProguardFiles 'proguard-rules.pro'
+        
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'commons-net:commons-net:3.6'
+    implementation 'org.apache.commons:commons-lang3:3.11'
+
+}
+repositories {
+    mavenCentral()
+}
+
+//apply from: 'publishToMavenLocal.gradle'
+
+//apply from: 'coverage.gradle'
